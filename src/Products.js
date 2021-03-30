@@ -22,7 +22,7 @@ function Products(){
                 rating : 2 ,
                 numOfReviews : 12
             },
-            {
+             {
                 imageUrl: "http://loremflickr.com/150/150?random=3",
                 productName : "Product 3",
                 releasedDate : "October 31, 2016",
@@ -42,8 +42,9 @@ function Products(){
 
     return(
         <div>
-
-            <ul>{listProducts}</ul>
+          {/* {listProducts.length>0 && <ul>{listProducts}</ul>}     
+          {listProducts.length==0 && <ul>No Products to Display</ul>} */}
+          {listProducts.length > 0 ? ( <ul>{listProducts}</ul>) : (<ul>No Products to Display</ul>)}
         </div>
     )
 
