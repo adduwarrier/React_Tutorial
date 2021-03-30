@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
+<<<<<<< HEAD
 import {Form, Button, Alert} from 'react-bootstrap';
+=======
+import {Form, Button} from 'react-bootstrap';
+>>>>>>> 9bd8b63a70fe0979a74888b03189400447f29643
 
 function UserForm(){
 
@@ -10,7 +14,10 @@ function UserForm(){
     const handleSubmit = event => {
       event.preventDefault();
       var emailValid = false;
+<<<<<<< HEAD
       var passwordValid = false;
+=======
+>>>>>>> 9bd8b63a70fe0979a74888b03189400447f29643
       if(email.length == 0){
         setEmailError("Email is required. ");
       }
@@ -24,6 +31,7 @@ function UserForm(){
         setEmailError(" ");
         emailValid = true;
       }
+<<<<<<< HEAD
       if(password.length == 0){
         setPasswordError("Password is required. ")
       }
@@ -41,6 +49,10 @@ function UserForm(){
         alert('Email: ' + email +'\nPassword: ' + password);
         setEmail(" ");
         setPassword(" ");
+=======
+      if(emailValid){
+        alert('Email: ' + email +'\nPassword: ' + password);
+>>>>>>> 9bd8b63a70fe0979a74888b03189400447f29643
       }
     }
 
@@ -50,12 +62,17 @@ function UserForm(){
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" 
+<<<<<<< HEAD
           onChange = {event => setEmail(event.target.value)}
           value = {email}/>
+=======
+          onChange = {event => setEmail(event.target.value)}/>
+>>>>>>> 9bd8b63a70fe0979a74888b03189400447f29643
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
+<<<<<<< HEAD
         {emailError.length>0 &&
         <Alert variant="danger">{emailError}</Alert>}
         <Form.Group controlId="formBasicPassword">
@@ -66,13 +83,27 @@ function UserForm(){
         </Form.Group>
         {passwordError.length>0 && 
         <Alert variant = "danger">{passwordError}</Alert>}
+=======
+      
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" 
+          onChange = {event => setPassword(event.target.value)}/>
+        </Form.Group>
+>>>>>>> 9bd8b63a70fe0979a74888b03189400447f29643
         <Button variant="primary" type="submit">
           Submit
         </Button>
       </Form>
+<<<<<<< HEAD
       {/* Email Entered : {email}
       <br/>
       Password Entered : {password} */}
+=======
+      Email Entered : {email}
+      <br/>
+      Password Entered : {password}
+>>>>>>> 9bd8b63a70fe0979a74888b03189400447f29643
       </div>
     );
 }
