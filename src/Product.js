@@ -1,6 +1,7 @@
 import React from 'react';
 import {Media} from 'react-bootstrap';
 import Rating from './Rating';
+// import listProducts from './Products';
 
 
 const Product = (props) => {
@@ -23,6 +24,7 @@ const Product = (props) => {
       </p>
     </Media.Body>
    </Media>
+    
         </div>
     );
 }
